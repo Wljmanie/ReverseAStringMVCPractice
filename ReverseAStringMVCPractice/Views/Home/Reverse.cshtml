@@ -1,0 +1,25 @@
+﻿@model ReverseAStringMVCPractice.Models.Palindrome
+
+<div>
+    Hier komt de app text bla bla.
+    Dan een enter ding en form.
+</div>
+
+<form class="row gy-2 gx-3" asp-action="Reverse" asp-controller="Home" method="post">
+    <div class="col">
+        <input asp-for="InputWord" class="form-control" value="@Model.InputWord" placeholder="* type a word *" />
+    </div>
+    <div class="col-12 d-flex align-items-center justify-content-start justify-content-lg-end">
+        <button id="btnSubmit" type="submit" class="btn btn-dark btn-lg">Palindrome Test</button>
+    </div>
+</form>
+
+<h5 class="mt-5 border-bottom border-2">Reversed Result</h5>
+<div class="col">
+    <p class="form-control">@Model.RevWord</p>
+</div>
+
+<h2 class="mt-5 border-bottom border-2">Palidrome Results</h2>
+<div class="table-responsive">
+    <p id="results">@Model.Message</p>
+</div>
